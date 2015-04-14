@@ -1,0 +1,32 @@
+<ion-view view-title="Noticias">
+  <ion-content>
+    <div class="list card" ng-repeat="news in stories">
+      <div class="item item-divider">
+        <!-- <img src="{{news.avatar}}"> -->
+        <h2>{{news.newsTitle}}</h2>
+        <p>{{news.eventDate}}</p>
+      </div>
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{news.eventBanner}}">
+        <p>{{news.newsContent}}</p>        
+          <a href="#" class="subdued">9010 Me gusta</a>
+          <a href="#" class="subdued">5121 Comentarios</a>
+        </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Me gusta
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentar
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Compartir
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
