@@ -2,5 +2,6 @@
 
 * Clone the project
 * Create your branch
-* npm install
-* bower install
+* $ npm install
+* $ bower install
+* $ ionic serve
