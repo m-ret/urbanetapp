@@ -1,0 +1,7 @@
+2015-04-14 18:06:12.826 UrbanetApp[33668:2398508] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Marcelo/Library/Developer/CoreSimulator/Devices/C26635D0-9778-4B57-97F8-8F30E59E4FD7/data/Containers/Data/Application/A6CB14C4-ED96-4021-B0F5-1C07BD67EBD9/Library/Cookies/Cookies.binarycookies
+2015-04-14 18:06:12.926 UrbanetApp[33668:2398508] Multi-tasking -> Device: YES, App: YES
+2015-04-14 18:06:12.954 UrbanetApp[33668:2398508] Unlimited access to network resources
+2015-04-14 18:06:13.430 UrbanetApp[33668:2398508] [CDVTimer][keyboard] 3.346980ms
+2015-04-14 18:06:13.430 UrbanetApp[33668:2398508] [CDVTimer][TotalPluginStartup] 3.579974ms
+2015-04-14 18:06:14.132 UrbanetApp[33668:2398508] Resetting plugins due to page load.
+2015-04-14 18:06:15.622 UrbanetApp[33668:2398508] Finished load of: file:///Users/Marcelo/Library/Developer/CoreSimulator/Devices/C26635D0-9778-4B57-97F8-8F30E59E4FD7/data/Containers/Bundle/Application/27B06691-0B1D-47FD-8BCB-A22DCB18D15A/UrbanetApp.app/www/index.html#/login
