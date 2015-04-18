@@ -32,13 +32,21 @@
     <script src="js/services/authFactory.js"></script>
     <script src="js/services/newsFactory.js"></script>
   </head>
-  <body ng-app="starter">
-
+  <body ng-app="starter">        
+      
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
       </ion-nav-back-button>
     </ion-nav-bar>
+
+    <ion-header-bar class="bar-subheader">
+      <audio src="http://fire.wavestreamer.com:9711/UrbanetRadio"
+             controls="controls"
+             autoplay>
+      </audio>
+    </ion-header-bar>  
     
-    <ion-nav-view></ion-nav-view>
+    <ion-nav-view>      
+    </ion-nav-view>
   </body>
 </html>

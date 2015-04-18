@@ -10,14 +10,14 @@ angular.module('starter.controllers', [])
 
   $scope.login = function scopeLogin() {
 
-    ref.authWithOAuthRedirect("facebook", function(error, authData) {
+    ref.authWithOAuthPopup("facebook", function(error, authData) {
       if (error) {
         console.log("Login Failed!", error);
       } else {
         $state.transitionTo('tabs.news');
         console.log("Authenticated successfully with payload:", angular.toJson(authData, 'pretty'));
       }
-    });
+    }, {scope: "email,user_friends,public_profile"});
   };
 
   $scope.logout = Auth.logout;

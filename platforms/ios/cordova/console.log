@@ -5,3 +5,15 @@
 2015-04-14 18:06:13.430 UrbanetApp[33668:2398508] [CDVTimer][TotalPluginStartup] 3.579974ms
 2015-04-14 18:06:14.132 UrbanetApp[33668:2398508] Resetting plugins due to page load.
 2015-04-14 18:06:15.622 UrbanetApp[33668:2398508] Finished load of: file:///Users/Marcelo/Library/Developer/CoreSimulator/Devices/C26635D0-9778-4B57-97F8-8F30E59E4FD7/data/Containers/Bundle/Application/27B06691-0B1D-47FD-8BCB-A22DCB18D15A/UrbanetApp.app/www/index.html#/login
+2015-04-15 23:24:36.619 UrbanetApp[33668:2398508] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2015-04-15 23:24:36.669 UrbanetApp[33668:2398508] THREAD WARNING: ['InAppBrowser'] took '423.869141' ms. Plugin should use a background thread.
+2015-04-15 23:24:37.037 UrbanetApp[33668:2398508] webView:didFailLoadWithError - -1005: The network connection was lost.
+2015-04-15 23:24:40.014 UrbanetApp[33668:2398508] ERROR: {"code":"USER_CANCELLED"}
+2015-04-15 23:24:41.297 UrbanetApp[33668:2398508] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2015-04-15 23:24:41.299 UrbanetApp[33668:2398508] THREAD WARNING: ['InAppBrowser'] took '55.022949' ms. Plugin should use a background thread.
+2015-04-15 23:24:41.406 UrbanetApp[33668:2398508] webView:didFailLoadWithError - -1005: The network connection was lost.
+2015-04-15 23:25:10.742 UrbanetApp[33668:2398508] ERROR: {"code":"USER_CANCELLED"}
+2015-04-15 23:25:13.123 UrbanetApp[33668:2398508] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2015-04-15 23:25:13.125 UrbanetApp[33668:2398508] THREAD WARNING: ['InAppBrowser'] took '47.963867' ms. Plugin should use a background thread.
+2015-04-15 23:25:13.227 UrbanetApp[33668:2398508] webView:didFailLoadWithError - -1005: The network connection was lost.
+2015-04-15 23:25:36.111 UrbanetApp[33668:2523650] Terminating since there is no system app.

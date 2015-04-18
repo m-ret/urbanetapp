@@ -67,7 +67,7 @@ angular.module('starter', ['ionic',
       }
     });
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/tabs/news');
 
 })
 
