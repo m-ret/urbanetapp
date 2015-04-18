@@ -7,7 +7,7 @@ angular.module('starter.services')
   var news = [{
     id: 0,
     newsTitle: '¡Skrillex en Costa Rica!',
-    newsContent: 'Un hábil lector del público, Skrillex, compartió ingeniosas combinaciones que mantuvieron a sus fanáticos de puntillas, gritando y saltando sin parar. Concluido el espectáculo a las 8 p. m., los productores del evento informaron de que el cierre del festival, a cargo de Moby, se trasladaría para la tarima oeste. Originalmente se había programado para la tarima del bosque, donde el espacio es más limitado.',
+    newsContent: 'Un hábil lector del público, Skrillex, compartió ingeniosas combinaciones que mantuvieron a sus fanáticos de puntillas, gritando y saltando sin parar. Concluido el espectáculo a las 8 PM, los productores del evento informaron de que el cierre del festival, a cargo de Moby, se trasladaría para la tarima oeste. Originalmente se había programado para la tarima del bosque, donde el espacio es más limitado.',
     eventBanner: '../img/skrillex-banner.jpg',
     eventDate: '12 Abril, 2015'
   }, {
