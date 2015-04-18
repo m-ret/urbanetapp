@@ -25,11 +25,11 @@ angular.module('starter', ['ionic',
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
-    })
+    // .state('login', {
+    //   url: '/login',
+    //   templateUrl: 'templates/login.html',
+    //   controller: 'LoginCtrl'
+    // })
 
     .state('tabs', {
       url: "/tabs",
@@ -72,8 +72,8 @@ angular.module('starter', ['ionic',
 })
 
 // change this URL to your Firebase
-.constant('FBURL', 'https://urbanetapp.firebaseio.com')
+// .constant('FBURL', 'https://urbanetapp.firebaseio.com')
 
 // constructor injection for a Firebase reference
-.service('Root', ['FBURL', Firebase])
+// .service('Root', ['FBURL', Firebase])
 
