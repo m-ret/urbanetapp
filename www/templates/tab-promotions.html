@@ -1,0 +1,29 @@
+<ion-view view-title="Promociones">
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-clear" ng-click="loginPopup()">
+      Login
+    </button>
+  </ion-nav-buttons>
+  <ion-content has-header="true">
+    <ion-refresher
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div ng-repeat="promos in promotions" 
+         class="padding-vertical">
+      <div class="item item-text-wrap">
+          <b>{{:: promos.promoContent}}</b>
+          <p>{{:: promos.eventDate}}</p>
+      </div>
+
+      <ul class="list">
+        <div class="item item-image">
+          <img ng-src="{{promos.promoBanner}}">
+        </div>
+        <a class="item item-divider item-text-wrap"
+           href="#/tabs/promotions/{{promos.id}}">
+          Aplica aquí <i class="icon ion-arrow-right-c"></i>
+        </a>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

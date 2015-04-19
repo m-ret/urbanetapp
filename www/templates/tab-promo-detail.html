@@ -1,0 +1,33 @@
+<ion-view view-title="Detalles de la promoción">
+  <ion-content has-header="true">
+  	<div class="list">
+  		<div class="item item-thumbnail-left item-text-wrap">
+		    <img ng-src="{{promos.promoBanner}}">		    
+		    <p>{{promos.promoContent}}</p>
+		  </div>
+	  </div>     
+    <form name="promo-form" class="promo-form" novalidate form-manager>
+    	<div class="list">
+    		<label class="item item-input">
+    			<input ng-model="message.name" name="fieldName"
+    			  		 type="text" placeholder="Nombre"
+    			  		 required ng-minlength="2" ng-maxlength="70">
+    		</label>
+    		<label class="item item-input">
+    			<input ng-model="message.email" name="fieldEmail" 
+    					   type="email" placeholder="E-mail"
+    					   required ng-maxlength="50">
+    		</label>
+    		<label class="item item-input">
+    			<textarea ng-model="message.body" name="fieldBody"
+    								placeholder="¿A dónde más te podemos contactar?" rows="3"
+    								required ng-minlength="2" ng-maxlength="70">
+    			</textarea>
+    		</label>
+    	</div>
+    	<div class="padding">
+    		<button ng-click="submit()" class="button button-dark button-block">Aplicar</button>
+    	</div>
+    </form>       
+  </ion-content>
+</ion-view>
