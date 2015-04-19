@@ -3,13 +3,14 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic',
-                           'firebase',
-                           'starter.controllers',
-                           'starter.services'])
+angular.module('urbanet.app', ['ionic',
+                               'ngCordova',                   
+                               'urbanet.app.controllers',
+                               'urbanet.app.services'])
 
 // do all the things ionic needs to get going
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaOauth, $cordova) {
+  $cordovaOauth.facebook("665553936905980", ["email", "read_stream", "user_website", "user_location", "user_relationships"]);
     $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -42,38 +43,31 @@ angular.module('starter', ['ionic',
         views: {
           'tab-news': {
             templateUrl: 'templates/tab-news.html',
-            controller: 'ChatsCtrl'
+            controller: 'NewsCtrl'
           }
         }
       })
 
-    .state('tabs.dash', {
-      url: '/dash',
+    .state('tabs.promotions', {
+      url: '/promotions',
       views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashCtrl'
+        'tab-promotions': {
+          templateUrl: 'templates/tab-promotions.html',
+          controller: 'PromosCtrl'
         }
       }
     })
 
-    .state('tabs.account', {
-      url: '/account',
+    .state('tabs.promo-detail', {
+      url: '/promotions/:promotionsId',
       views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+        'tab-promotions': {
+          templateUrl: 'templates/tab-promo-detail.html',
+          controller: 'PromoDetailCtrl'
         }
       }
     });
 
   $urlRouterProvider.otherwise('/tabs/news');
 
-})
-
-// change this URL to your Firebase
-// .constant('FBURL', 'https://urbanetapp.firebaseio.com')
-
-// constructor injection for a Firebase reference
-// .service('Root', ['FBURL', Firebase])
-
+});

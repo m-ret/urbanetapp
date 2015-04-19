@@ -1,28 +1,54 @@
 'use strict';
 
-angular.module('starter.controllers', [])
+angular.module('urbanet.app.controllers', [])
 
-.controller("LoginCtrl", function($scope, $state, Auth) {
+.controller("LoginCtrl", function($scope, $rootScope, $ionicPopup, $timeout, $cordovaOauth) {
 
-  var ref = new Firebase("https://urbanetapp.firebaseio.com");
+  $scope.loginPopup = function() {
 
-  $scope.user = null;
+    $scope.data = {}
 
-  $scope.login = function scopeLogin() {
-
-    ref.authWithOAuthPopup("facebook", function(error, authData) {
-      if (error) {
-        console.log("Login Failed!", error);
-      } else {
-        $state.transitionTo('tabs.news');
-        console.log("Authenticated successfully with payload:", angular.toJson(authData, 'pretty'));
-      }
-    }, {scope: "email,user_friends,public_profile"});
+    // An elaborate, custom popup
+    var myPopup = $ionicPopup.show({
+      // template: '<button class="ion-social-facebook" type="button" ng-model="data.wifi" ng-click="login()">',
+      title: 'Ingresá con Facebook',
+      // subTitle: '',
+      scope: $scope,
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: '<b>Inicia sesión</b>',
+          type: 'button-positive',
+          // onTap: function(e) {
+          //   if (!$scope.data.wifi) {
+          //     //don't allow the user to close unless he enters wifi password
+          //     e.preventDefault();
+          //   } else {
+          //     return $scope.data.wifi;
+          //   }
+          // }
+        }
+      ]
+    });
+    myPopup.then(function(res) {
+      console.log('Tapped!', res);
+      $scope.login();
+      myPopup.close();
+    });
+    // $timeout(function() {
+    //    myPopup.close(); //close the popup after 3 seconds for some reason
+    // }, 3000);
   };
 
-  $scope.logout = Auth.logout;
+  $scope.login = function() {
 
-  Auth.onAuth(function(authData) {
-    $scope.user = authData;
-  });
+    $cordovaOauth.facebook("665553936905980", ["email"]).then(function(result) {
+        console.log('ON FB');
+    }, function(error) {
+        console.log('OH NO :(');
+    });
+
+    console.log('LOGIN');
+  };
+
 });

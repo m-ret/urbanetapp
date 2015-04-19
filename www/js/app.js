@@ -9,7 +9,7 @@ angular.module('urbanet.app', ['ionic',
                                'urbanet.app.services'])
 
 // do all the things ionic needs to get going
-.run(function($ionicPlatform, $cordovaOauth, $cordova) {
+.run(function($ionicPlatform, $cordovaOauth) {
   $cordovaOauth.facebook("665553936905980", ["email", "read_stream", "user_website", "user_location", "user_relationships"]);
     $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

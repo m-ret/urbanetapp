@@ -1,4 +1,4 @@
-angular.module('starter.services')
+angular.module('urbanet.app.services')
 
 .factory('NewsFactory', function() {
   // Might use a resource here that returns a JSON array
@@ -34,9 +34,6 @@ angular.module('starter.services')
     all: function() {
       return news;
     },
-    // remove: function(notice) {
-    //   chats.splice(chats.indexOf(chat), 1);
-    // },
     get: function(newsId) {
       for (var i = 0; i < stories.length; i++) {
         if (stories[i].id === parseInt(noticeId)) {

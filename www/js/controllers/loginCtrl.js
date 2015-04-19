@@ -44,8 +44,10 @@ angular.module('urbanet.app.controllers', [])
 
     $cordovaOauth.facebook("665553936905980", ["email"]).then(function(result) {
         console.log('ON FB');
+        console.log(result);
     }, function(error) {
         console.log('OH NO :(');
+        console.log(error);
     });
 
     console.log('LOGIN');

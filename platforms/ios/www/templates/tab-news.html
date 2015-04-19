@@ -1,26 +1,32 @@
 <ion-view view-title="Noticias">
-  <ion-content>
-    <div class="list card">
-      <div class="item item-image">
-        <img src="/img/3004.jpg">
-      </div>
-    </div>
-    <ul class="list">
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-clear" ng-click="loginPopup()">
+      Login
+    </button>
+  </ion-nav-buttons>
+  <ion-content has-header="true">
+    <ion-refresher
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="item item-image">
+      <img src="/img/ur.jpg">
+    </div>    
+    <ul class="list padding-top">
         <li class="item item-divider centered">
-          <b>NOTICIAS</b>
+          <b>Lo que acontece</b>          
         </li>
     </ul>
-    <div class="list card" ng-repeat="news in stories">    
-      <div class="item item-divider">
-        <!-- <img src="{{news.avatar}}"> -->        
-        <h2>{{news.newsTitle}}</h2>
-        <p>{{news.eventDate}}</p>
+    <div class="list card edges" ng-repeat="news in stories">    
+      <div class="item item-text-wraper item-divider">
+        <h2>{{:: news.newsTitle}}</h2>
+        <p>{{:: news.eventDate}}</p>
       </div>
       <div class="item item-body">
-        <img class="full-image" ng-src="{{news.eventBanner}}">
-        <p>{{news.newsContent}}</p>        
+        <img class="full-image" ng-src="{{news.eventBanner}}">        
+          <!-- <img src="{{news.avatar}}"> -->          
+        <p>{{:: news.newsContent}}</p>        
           <!-- <a href="#" class="subdued">9010 Me gusta</a> -->
-          <a href="#" class="subdued">5121 Comentarios</a>
+          <a href="#" class="subdued">Leer más...</a>
         </p>
       </div>
       <div class="item tabs tabs-secondary tabs-icon-left">
