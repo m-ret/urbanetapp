@@ -2,3 +2,18 @@
 .centered {
 	text-align: center;
 }
+
+.edges {
+	border-radius: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.spinner-android svg {
+  width: 60px;
+  height: 60px;
+}
+
+textarea {
+    resize: none;
+}

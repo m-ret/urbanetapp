@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('urbanet.app.services', [])
 // create a custom Auth factory to handle $firebaseAuth
 .factory('Auth', function($firebaseAuth, Root, $timeout){
   var auth = $firebaseAuth(Root);

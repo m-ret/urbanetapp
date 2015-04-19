@@ -1,28 +1,44 @@
 'use strict';
 
-angular.module('starter.controllers', [])
+angular.module('urbanet.app.controllers', [])
 
-.controller("LoginCtrl", function($scope, $state, Auth) {
+.controller("LoginCtrl", function($scope, $ionicPopup, $timeout) {
 
-  var ref = new Firebase("https://urbanetapp.firebaseio.com");
-
-  $scope.user = null;
-
-  $scope.login = function scopeLogin() {
-
-    ref.authWithOAuthPopup("facebook", function(error, authData) {
-      if (error) {
-        console.log("Login Failed!", error);
-      } else {
-        $state.transitionTo('tabs.news');
-        console.log("Authenticated successfully with payload:", angular.toJson(authData, 'pretty'));
-      }
-    }, {scope: "email,user_friends,public_profile"});
-  };
-
-  $scope.logout = Auth.logout;
-
-  Auth.onAuth(function(authData) {
-    $scope.user = authData;
+  $scope.$emit('login.LoginCtrl', {
+    someProp: 'Sending you an Object!' // send whatever you want
   });
+
+  $scope.showPopup = function() {
+
+    $scope.data = {}
+
+    // An elaborate, custom popup
+    var myPopup = $ionicPopup.show({
+      template: '<input type="password" ng-model="data.wifi">',
+      title: 'Enter Wi-Fi Password',
+      subTitle: 'Please use normal things',
+      scope: $scope,
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: '<b>Save</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+            if (!$scope.data.wifi) {
+              //don't allow the user to close unless he enters wifi password
+              e.preventDefault();
+            } else {
+              return $scope.data.wifi;
+            }
+          }
+        }
+      ]
+    });
+    myPopup.then(function(res) {
+      console.log('Tapped!', res);
+    });
+    $timeout(function() {
+       myPopup.close(); //close the popup after 3 seconds for some reason
+    }, 3000);
+  };
 });
