@@ -41,6 +41,14 @@ module.exports = [
         "clobbers": [
             "window.open"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -50,7 +58,8 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.9",
     "org.apache.cordova.device": "0.2.10",
     "com.bez4pieci.cookies": "0.0.1",
-    "org.apache.cordova.inappbrowser": "0.6.0"
+    "org.apache.cordova.inappbrowser": "0.6.0",
+    "cordova-plugin-inappbrowser": "1.0.1-dev"
 }
 // BOTTOM OF METADATA
 });

@@ -44,6 +44,7 @@
 		70FFE2F85280430287C49C13 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C20D4929B7F049C89A8D1FB1 /* CDVDevice.m */; };
 		E69E22D1482F4D7EA71EBAA3 /* CDVCookies.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C424FC43D754606B9662961 /* CDVCookies.m */; };
 		FC8FD40A4E034E28B210BE1F /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = A140BF5C46C94150ABF42481 /* CDVInAppBrowser.m */; };
+		0988877D16B2433FA428C4F8 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFC456F4C842C9B4C8C009 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		A97FBCD6391444C0B550B844 /* CDVCookies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVCookies.h"; path = "com.bez4pieci.cookies/CDVCookies.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		A140BF5C46C94150ABF42481 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		59479B6931A041949BE905D3 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		EFBFC456F4C842C9B4C8C009 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F2F3484BE5B44C0288F460E6 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				A97FBCD6391444C0B550B844 /* CDVCookies.h */,
 				A140BF5C46C94150ABF42481 /* CDVInAppBrowser.m */,
 				59479B6931A041949BE905D3 /* CDVInAppBrowser.h */,
+				EFBFC456F4C842C9B4C8C009 /* CDVInAppBrowser.m */,
+				F2F3484BE5B44C0288F460E6 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "UrbanetApp/Plugins";
@@ -452,6 +457,7 @@
 				70FFE2F85280430287C49C13 /* CDVDevice.m in Sources */,
 				E69E22D1482F4D7EA71EBAA3 /* CDVCookies.m in Sources */,
 				FC8FD40A4E034E28B210BE1F /* CDVInAppBrowser.m in Sources */,
+				0988877D16B2433FA428C4F8 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
