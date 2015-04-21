@@ -1,6 +1,6 @@
 <ion-view view-title="Promociones">
   <ion-nav-buttons side="primary">
-    <button class="button button-clear button-clear" ng-click="loginPopup()">
+    <button class="button button-clear button-clear" ng-click="openModal()">
       Login
     </button>
   </ion-nav-buttons>
@@ -8,7 +8,7 @@
     <ion-refresher
       on-refresh="doRefresh()">
     </ion-refresher>
-    <div ng-repeat="promos in promotions" 
+    <div ng-repeat="promos in promotions"
          class="padding-vertical">
       <div class="item item-text-wrap">
           <b>{{:: promos.promoContent}}</b>

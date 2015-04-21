@@ -2,7 +2,11 @@
 
 angular.module('urbanet.app.controllers', [])
 
-.controller("LoginCtrl", function($scope, $rootScope, $ionicPopup, $timeout, $cordovaOauth) {
+.controller("LoginCtrl", function($scope, $rootScope, $ionicPopup, $timeout, $cordovaOauth, $firebaseAuth) {
+
+  var fb = new Firebase("https://urbanetapp.firebaseio.com");
+
+  var auth = $firebaseAuth(fb);
 
   $scope.loginPopup = function() {
 
@@ -42,13 +46,25 @@ angular.module('urbanet.app.controllers', [])
 
   $scope.login = function() {
 
-    $cordovaOauth.facebook("665553936905980", ["email"]).then(function(result) {
-        console.log('ON FB');
-    }, function(error) {
-        console.log('OH NO :(');
-    });
+        $cordovaOauth.facebook("665553936905980", ["email"]).then(function(result) {
+            auth.$authWithOAuthToken("facebook", result.access_token).then(function(authData) {
+                console.log(JSON.stringify(authData));
+            }, function(error) {
+                console.error("ERROR: " + error);
+            });
+        }, function(error) {
+            console.log("ERROR: " + error);
+        });
 
-    console.log('LOGIN');
+    // $cordovaOauth.facebook("665553936905980", ["email"]).then(function(result) {
+    //     console.log('ON FB');
+    //     console.log(result);
+    // }, function(error) {
+    //     console.log('OH NO :(');
+    //     console.log(error);
+    // });
+
+    // console.log('LOGIN');
   };
 
 });

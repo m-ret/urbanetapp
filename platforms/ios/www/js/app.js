@@ -4,13 +4,16 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('urbanet.app', ['ionic',
-                               'ngCordova',                   
+                               // 'ngCordova',
+                               'firebase',
+                               'ngCordovaOauth',
                                'urbanet.app.controllers',
                                'urbanet.app.services'])
 
 // do all the things ionic needs to get going
-.run(function($ionicPlatform, $cordovaOauth, $cordova) {
-  $cordovaOauth.facebook("665553936905980", ["email", "read_stream", "user_website", "user_location", "user_relationships"]);
+.run(function($ionicPlatform, $cordovaOauth) {
+  var fb = new Firebase("https://urbanetapp.firebaseio.com");
+  // $cordovaOauth.facebook("665553936905980", ["email", "read_stream", "user_website", "user_location", "user_relationships"]);
     $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)

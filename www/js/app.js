@@ -4,16 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('urbanet.app', ['ionic',
-                               'ngCordova',                   
+                               'firebase',
                                'urbanet.app.controllers',
                                'urbanet.app.services'])
 
 // do all the things ionic needs to get going
-.run(function($ionicPlatform, $cordovaOauth) {
-  $cordovaOauth.facebook("665553936905980", ["email", "read_stream", "user_website", "user_location", "user_relationships"]);
+.run(function($ionicPlatform) {
+  var ref = new Firebase("https://urbanetapp.firebaseio.com");
     $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -25,12 +23,6 @@ angular.module('urbanet.app', ['ionic',
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-    // .state('login', {
-    //   url: '/login',
-    //   templateUrl: 'templates/login.html',
-    //   controller: 'LoginCtrl'
-    // })
 
     .state('tabs', {
       url: "/tabs",
@@ -64,6 +56,16 @@ angular.module('urbanet.app', ['ionic',
         'tab-promotions': {
           templateUrl: 'templates/tab-promo-detail.html',
           controller: 'PromoDetailCtrl'
+        }
+      }
+    })
+
+    .state('tabs.sign-signup', {
+      url: '/signup',
+      views: {
+        'signup': {
+          templateUrl: 'templates/tab-signup.html',
+          controller: 'LoginCtrl'
         }
       }
     });
